@@ -6,9 +6,9 @@
  */
 void print_to_98(int n)
 {
-	int stop;
+	int stop = 99;
 
-	while (n < 99)
+	while (n < stop)
 	{
 		n++;
 	}
