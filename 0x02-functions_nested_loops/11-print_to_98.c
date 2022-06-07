@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_to_98 - prints natural numbers from n to 98
  * @n: the start of the range of numbers to be printed
@@ -6,14 +7,14 @@
  */
 void print_to_98(int n)
 {
-	int stop = 98;
+	int s = 98;
 
-	while (n <= stop)
+	for (n = n; n <= s; n++)
 	{
-		n++;
+		printf("%d\n", n);
 	}
-	while (n >= stop)
+	for (n = n; n >= s; n--)
 	{
-		n--;
+		printf("%d\n", n);
 	}
 }
