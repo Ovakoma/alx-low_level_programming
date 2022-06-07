@@ -7,7 +7,7 @@
  */
 int add(int i, int j)
 {
-	int i, j, s;
+	int s;
 
 	s = i + j;
 	return (s);
