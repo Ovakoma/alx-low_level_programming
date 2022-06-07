@@ -6,10 +6,14 @@
  */
 void print_to_98(int n)
 {
-	int stop = 99;
+	int stop = 98;
 
-	while (n < stop)
+	while (n <= stop)
 	{
 		n++;
+	}
+	while (n >= stop)
+	{
+		n--;
 	}
 }
