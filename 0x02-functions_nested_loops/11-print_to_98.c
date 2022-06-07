@@ -7,14 +7,12 @@
  */
 void print_to_98(int n)
 {
-	int s = 98;
-
-	for (n = n; n <= s; n++)
+	for (int s = n; s < 99; s++)
 	{
-		printf("%d\n", n);
+		printf("%d, ", s);
 	}
-	for (n = n; n >= s; n--)
+	for (int s = n; s > 97; s--)
 	{
-		printf("%d\n", n);
+		printf("%d, ", s);
 	}
 }
