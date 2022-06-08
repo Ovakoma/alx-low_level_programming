@@ -21,15 +21,15 @@ void times_table(void)
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
-				_putchar(k + '0');
+				_putchar(s + '0');
 			} else if (s >= 10)
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putcha((s / 10) + '0');
+				_putchar((s / 10) + '0');
 				_putchar((s % 10) + '0');
 			}
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
