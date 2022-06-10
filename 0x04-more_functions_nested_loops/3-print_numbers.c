@@ -1,17 +1,18 @@
 #include "main.h"
-
 /**
- * print_numbers - prints a range of numbers
+ * print_numbers - prints a range of numbers with a new line
  * Return: void
  */
 
 void print_numbers(void)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; i <= 9; i++)
+	while (i < 10)
 	{
 		_putchar(i);
+		i++;
 	}
 	_putchar('\n');
 }
+
