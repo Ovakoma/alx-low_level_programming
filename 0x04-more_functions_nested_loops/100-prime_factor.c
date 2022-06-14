@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
  * main - prints largest factor of number in variable n
@@ -9,25 +10,27 @@
 
 int main(void)
 {
-	long long int n, prime, i;
+	long int n, prime, i;
 
 	n = 612852475143;
-	prime = 0;
-	i = 2;
+	prime = -1;
 
-	while (n != 1)
+	while (n % 2 == 0)
 	{
-		if (n % i == 0)
-		{
-			while (n % i == 0)
-			{
-				printf("%lld\t", i);
-				n /= i;
-			}
-			prime = i;
-		}
-		i++;
+		prime = 2;
+		n /= 2;
 	}
-	printf("\n\nThe largest prime factor is: %lld\n\n", prime);
+	for (i = 3; i <= sqrt(n); i = i + 2)
+	{
+		while (n % i == 0)
+		{
+			prime = i;
+			n /= i;
+		}
+	}
+	if (n > 2)
+		prime = n;
+
+	printf("%ld\n", prime);
 	return (0);
 }
