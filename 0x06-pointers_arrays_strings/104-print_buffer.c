@@ -2,32 +2,6 @@
 #include <stdio.h>
 
 /**
- * print_buffer - prints a buffer.
- * @b: parameter points to buffer
- * @size: size of bytes
- * Return: void
- */
-
-void print_buffer(char *b, int size)
-{
-	int start, end;
-
-	if (size > 0)
-	{
-		for (start = 0; start < size; start += 10)
-		{
-			end = (size - start < 10) ? size - start : 10;
-			printf("%08x: ", start);
-			printHexes(b, start, end);
-			printASCII(b, start, end);
-			printf("\n");
-		}
-		else
-			printf("\n");
-	}
-}
-
-/**
  * isPrintableASCII - determines if n is a printable ASCII char
  * @n: integer
  * Return: 1 if true, 0 if false
@@ -82,3 +56,29 @@ void printASCII(char *b, int start, int end)
 		i++;
 	}
 }
+
+/**
+* print_buffer - prints a buffer.
+* @b: parameter points to buffer
+* @size: size of bytes
+* Return: void
+*/
+
+void print_buffer(char *b, int size)
+{
+	int start, end;
+
+	if (size > 0)
+	{
+		for (start = 0; start < size; start += 10)
+		{
+			end = (size - start < 10) ? size - start : 10;
+			printf("%08x: ", start);
+			printHexes(b, start, end);
+			printASCII(b, start, end);
+			printf("\n");
+		}
+	} else
+		printf("\n");
+}
+	
