@@ -27,7 +27,7 @@ int s_comp(char *s, int n, int n1)
 	{
 		if (n == n1 || n == (n1 + 1))
 				return (1);
-		return (0 + s_comp(s, n + 1, n1 - 2));
+		return (0 + s_comp(s, n + 1, n1 - 1));
 	}
 	return (0);
 }
