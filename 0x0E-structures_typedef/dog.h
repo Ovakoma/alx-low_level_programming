@@ -1,5 +1,5 @@
-#ifndef FILE_DOG
-#define FILE_DOG
+#ifndef DOG_H
+#define DOG_H
 
 /**
  * struct dog - structure dog
@@ -10,9 +10,9 @@
 
 struct dog
 {
-	char* name;
+	char *name;
 	float age;
-	char* owner;
+	char *owner;
 };
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
