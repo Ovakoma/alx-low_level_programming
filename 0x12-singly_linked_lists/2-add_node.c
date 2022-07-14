@@ -5,10 +5,10 @@
 /**
  * _strlen - gets length of string
  * str: string passed to function
- * Return: length of string
+ * Return: length of sting
  */
 
-unsigned int _strlen(const char *str)
+int _strlen(const char *str)
 {
 	int i = 0;
 
@@ -28,8 +28,7 @@ unsigned int _strlen(const char *str)
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *node = NULL;
-	unsigned int len;
-	int i = 0;
+	int i = 0, len;
 	char *newString;
 
 	if (head == NULL || str == NULL)

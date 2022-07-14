@@ -3,6 +3,20 @@
 #include <stdlib.h>
 
 /**
+ * _strlen - gets length of string
+ * @str: string passed to function
+ * Return: length of string
+ */
+int _strlen(const char *str)
+{
+	int i = 0;
+
+	while (str[i])
+		i++;
+	return (i);
+}
+
+/**
  * _strdup - duplicates a string and stores it in memory
  * @src: source function
  * Return: pointer to memory withb copied string
