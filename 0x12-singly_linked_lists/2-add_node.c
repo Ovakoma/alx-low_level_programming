@@ -13,10 +13,10 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *node = NULL;
-	int len;
+	unsigned int len;
 	char *newString = NULL;
 
-	if (head == NULL && str == NULL)
+	if (head == NULL || str == NULL)
 		return (NULL);
 	while (strlen(str) != '\0')
 		len++;
