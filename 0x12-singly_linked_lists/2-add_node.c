@@ -28,7 +28,6 @@ list_t *add_node(list_t **head, const char *str)
 	if (node == NULL)
 	{
 		free(newString);
-		free(node);
 		return (NULL);
 	}
 	node->len = len;
