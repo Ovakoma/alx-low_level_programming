@@ -3,6 +3,21 @@
 #include <stdlib.h>
 
 /**
+ * _strlen - gets length of string
+ * str: string passed to function
+ * Return: length of string
+ */
+
+unsigned int _strlen(const char *str)
+{
+	int i = 0;
+
+	while (str[i])
+		i++;
+	return (i);
+}
+
+/**
  * *add_node - adds a new node at the beginning of a list_t list.
  * @head: head node
  * @str: string to function
@@ -14,16 +29,22 @@ list_t *add_node(list_t **head, const char *str)
 {
 	list_t *node = NULL;
 	unsigned int len;
-	char *newString = NULL;
+	int i = 0;
+	char *newString;
 
 	if (head == NULL || str == NULL)
 		return (NULL);
-	while (strlen(str) != '\0')
-		len++;
+	len = _strlen(str);
+	node = *head;
+
 	newString = malloc(sizeof(char) * len + 1);
 	if (newString == NULL)
 		return (NULL);
-	newString = strdup(str);
+	while (str[i])
+	{
+		newString[i] = str[i];
+		i++;
+	}
 	node = malloc(sizeof(list_t));
 	if (node == NULL)
 	{
