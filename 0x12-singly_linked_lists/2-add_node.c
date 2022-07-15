@@ -3,7 +3,7 @@
 
 /**
  * _strlen - gets length of string
- * str: string passed to function
+ * @str: string passed to function
  * Description: function gets string length
  * Return: length of sting
  */
